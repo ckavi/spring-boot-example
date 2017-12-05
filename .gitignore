@@ -12,10 +12,6 @@ target/
 mvnw
 mvnw.cmd
 
-mvnw
-mvnw.cmd
-./*.iml
-
 ### IntelliJ IDEA ###
 .idea
 *.iws
