@@ -21,7 +21,6 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 @EnableAutoConfiguration
 @EnableScheduling
-@Validated
 public class Example {
 
     @Autowired
@@ -42,7 +41,7 @@ public class Example {
     private static final String template = "Hello, %s!";
 
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") @Size(min = 10,max = 12) String name) {
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
 
         System.out.println(arguments.containsOption("debug"));
         System.out.println(configuration.getEnv());
